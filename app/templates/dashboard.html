@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard - NutriNova</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    
+    <body>
+        <header>
+            <h1>NutriNova Dashboard</h1>
+            <nav>
+                <a href="/dashboard" class="active">Dashboard</a> |
+                <a href="/food_entry">Log Food</a> |
+                <a href="/reports">Reports</a> |
+                <a href="/logout">Logout</a>
+            </nav>
+        </header>
+        
+        <main>
+            <section>
+                <h2>Daily Summary</h2>
+                <div id="daily-summary">Loading summary...</div>
+            </section>
+            
+            <section>
+                <h2>Nutritional Stats</h2>
+                <div id="nutritional-stats">Loading stats...</div>
+            </section>
+            
+            <section>
+                <h2>Quick Actions</h2>
+                <div class="quick-actions">
+                    <a href="/food_entry" class="action-button">Log Food</a>
+                    <a href="/reports" class="action-button">View Reports</a>
+                </div>
+            </section>
+        </main>
+        
+        <script src="/static/dashboard.js"></script>
+    </body>
+</html>

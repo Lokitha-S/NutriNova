@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Food Entry - NutriNova</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Food Entry</h1>
+            <nav>
+                <a href="/dashboard">Dashboard</a> |
+                <a href="/food_entry" class="active">Log Food</a> |
+                <a href="/reports">Reports</a> |
+                <a href="/logout">Logout</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>Manual Entry</h2>
+                <form id="manual-entry-form">
+                    <input type="text" name="food_name" placeholder="Food name">
+                    <input type="number" name="quantity" placeholder="Quantity">
+                    <button type="submit">Add</button>
+                </form>
+            </section>
+            
+            <section>
+                <h2>Speech Input</h2>
+                <button id="speech-btn">Speak</button>
+                <div id="speech-result"></div>
+            </section>
+            
+            <section>
+                <h2>Image Upload</h2>
+                <form id="image-upload-form" enctype="multipart/form-data">
+                    <input type="file" name="food_image" accept="image/*">
+                    <button type="submit">Upload</button>
+                </form>
+            </section>
+        </main>
+        
+        <script src="/static/food_entry.js"></script>
+    </body>
+</html>

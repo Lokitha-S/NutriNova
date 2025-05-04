@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nutrition Reports - NutriNova</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Nutrition Reports</h1>
+            <nav>
+                <a href="/dashboard">Dashboard</a> |
+                <a href="/food_entry">Log Food</a> |
+                <a href="/reports" class="active">Reports</a> |
+                <a href="/logout">Logout</a>
+            </nav>
+        </header>
+        
+        <main>
+            <section>
+                <h2>Nutritional Summary</h2>
+                <div id="nutrition-summary">
+                    <div class="summary-card">
+                        <h3>Daily Intake</h3>
+                        <div id="daily-chart"></div>
+                        <div id="daily-stats"></div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <h3>Weekly Trends</h3>
+                        <div id="weekly-chart"></div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Personalized Recommendations</h2>
+                <div id="recommendations">
+                    <div class="recommendation-card">
+                        <h3>Dietary Suggestions</h3>
+                        <div id="dietary-recommendations"></div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <h3>Nutrient Focus</h3>
+                        <div id="nutrient-recommendations"></div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Export Options</h2>
+                <div class="export-options">
+                    <button id="export-pdf">Export as PDF</button>
+                    <button id="export-csv">Export as CSV</button>
+                    <button id="share-report">Share Report</button>
+                </div>
+            </section>
+        </main>
+        
+        <script src="/static/reports.js"></script>
+    </body>
+</html>
