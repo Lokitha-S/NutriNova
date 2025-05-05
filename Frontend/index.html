@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NutriNova</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <div class="logo">
+        <img src="/images/logo.png" alt="Logo">
+      </div>
+      <form class="search-form">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button type="submit" class="search-button">🔍</button>
+      </form>
+    </div>
+  
+    <div class="header-right">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="profile">
+        <!-- Your profile image or icon here -->
+        <a href="/Login & Register/register.html"><img src="/images/profile.jpg" alt="Profile" style="width: 40px; border-radius: 50%;"></a>
+        
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Group Buttons -->
+    <section class="group-buttons">
+      <button class="group-btn active" data-index="0">
+          <img src="images/children.png" alt="Children">
+          <span>Children</span>
+      </button>
+      <button class="group-btn" data-index="1">
+        <img src="images/pregnant.png" alt="Pregnant Women">
+        <span>Pregnant Women</span>
+      </button>
+      <button class="group-btn" data-index="2">
+        <img src="images/bodybuilder.png" alt="Bodybuilder">
+        <span>Bodybuilder</span>
+      </button>
+      <button class="group-btn" data-index="3">
+        <img src="images/elderly.png" alt="Elderly">
+        <span>Elderly</span>
+      </button>
+    </section>  
+
+    <!-- Carousel -->
+    <section class="carousel next">
+      <div class="list">
+        <!-- Children -->
+        <article class="item active">
+          <div class="main-content" style="background-color: #fce4ec;">
+            <div class="content">
+              <h2>Children's Nutrition</h2>
+              <p class="description">A balanced diet with fruits, dairy, proteins, and grains ensures healthy development for children.</p>
+            </div>
+          </div>
+          <figure class="image">
+            <img src="images/children.png" alt="Children">
+            <figcaption>Children</figcaption>
+          </figure>
+        </article>
+
+        <!-- Pregnant Women -->
+        <article class="item">
+          <div class="main-content" style="background-color: #fff3e0;">
+            <div class="content">
+              <h2>Pregnant Women</h2>
+              <p class="description">High in folic acid, calcium, iron, and DHA—nutrition for two!</p>
+            </div>
+          </div>
+          <figure class="image">
+            <img src="images/pregnant.png" alt="Pregnant Women">
+            <figcaption>Pregnant Women</figcaption>
+          </figure>
+        </article>
+
+        <!-- Bodybuilder -->
+        <article class="item">
+          <div class="main-content" style="background-color: #e8f5e9;">
+            <div class="content">
+              <h2>Bodybuilders</h2>
+              <p class="description">Protein-rich diet with complex carbs, healthy fats, and hydration for muscle gain.</p>
+            </div>
+          </div>
+          <figure class="image">
+            <img src="images/bodybuilder.png" alt="Bodybuilder">
+            <figcaption>Bodybuilder</figcaption>
+          </figure>
+        </article>
+
+        <!-- Elderly -->
+        <article class="item">
+          <div class="main-content" style="background-color: #ede7f6;">
+            <div class="content">
+              <h2>Elderly</h2>
+              <p class="description">Nutrient-dense foods rich in calcium, vitamin D, fiber, and antioxidants support healthy aging.</p>
+            </div>
+          </div>
+          <figure class="image">
+            <img src="images/elderly.png" alt="Elderly">
+            <figcaption>Elderly</figcaption>
+          </figure>
+        </article>
+
+        <!-- Profile -->
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

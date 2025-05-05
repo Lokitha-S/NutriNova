@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  font-size: 16px;
+  background-color: #4f8b69;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --border-color: none;
+  --w-image: 500px;
+  --calculate: calc(3 / 2);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: 80px;
+  background-color: #4f8b69;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  z-index: 10;
+}
+
+/* Group container for logo and search */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Group container for navbar and profile */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.search-form {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  max-width: 400px;
+}
+
+.search-input {
+  padding: 0.55rem 1rem;
+  font-size: 1rem;
+  border: 1px solid white;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  flex: 1;
+}
+
+.search-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: white;
+  color: white;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #0096FF;
+}
+
+header .logo img {
+  width: 70px;
+}
+
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+header nav ul {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  padding-right: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav {
+  border-left: 1px solid var(--border-color);
+}
+
+/* Group Buttons */
+.group-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 0; /* Removed the 20px top margin */
+    padding: 20px;
+    background-color: #fff2;
+    position: relative;
+    z-index: 15;
+  }
+  
+
+.group-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #ffffffcc;
+  border: 2px solid var(--border-color);
+  padding: 1rem;
+  font-family: 'Poppins';
+  font-size: 2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+  width: 250px;
+  height: 350px;
+  position: relative;
+  z-index: 1;
+}
+
+.group-btn:hover {
+    transform: scale(1.05);
+  }
+
+.group-btn img {
+  height: 90%;
+  object-fit: contain;
+}
+
+.group-btn span {
+  font-size: 1.3rem;
+  color: #222;
+
+}
+
+.group-btn.active {
+    background-color: var(--active-bg, #4f8b69);
+    color: white;
+    border: none;
+    border-radius: 30px 30px 0 0; /* Rounded at bottom to merge into content */
+    transform: translateY(40px); /* Move down */
+    margin-bottom: -252px; /* Pull content up to merge visually */
+    z-index: 10;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0); /* Optional shadow for depth */
+    height: 60px;
+    flex-direction: row;
+    width: auto;
+    padding: 8px 16px;
+    gap: 12px;
+  }  
+
+.group-btn.active img {
+  display: none;
+}
+
+.group-btn.active span {
+  color: black;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.group-btn:not(.active):hover {
+  background-color: var(--active-bg, #4f8b69);
+  color: white;
+}
+
+/* Carousel */
+.carousel {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel .list {
+  height: 100%;
+  position: relative;
+}
+
+.carousel .list::before {
+  position: absolute;
+  width: var(--w-image);
+  height: 100%;
+  content: '';
+  top: 0;
+  left: calc(100% - calc(var(--w-image) * var(--calculate)));
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.carousel .list .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.carousel .list .item.active {
+  z-index: 2;
+  display: block;
+  animation: showContent 1s ease-in-out forwards;
+}
+
+/* Animation from clicked button */
+@keyframes showContent {
+  from {
+    clip-path: circle(0% at var(--clip-x, 70%) var(--clip-y, 50%));
+  }
+  to {
+    clip-path: circle(150% at var(--clip-x, 70%) var(--clip-y, 50%));
+  }
+}
+
+/* Slide content */
+.carousel .list .item .image {
+  width: var(--w-image);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: calc(100% - calc(var(--w-image) * var(--calculate)));
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  font-weight: 500;
+}
+
+.carousel .list .item .image img {
+  width: 70%;
+  margin-left: 40vw;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 150px 50px #0005);
+}
+
+.carousel .list .item .image figcaption {
+  font-family: 'Aboreto';
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 70%;
+}
+
+.carousel .list .item .main-content {
+  height: 100%;
+  display: grid;
+  grid-template-columns: calc(100% - calc(var(--w-image) * var(--calculate)));
+}
+
+.carousel .list .item .main-content .content {
+  padding: 150px 20px 20px 80px;
+}
+
+.carousel .list .item .main-content .content h2 {
+  font-size: 2.3em;
+  font-family: 'Aboreto';
+}
+
+.carousel .list .item .main-content .content .description {
+  font-size: 1.1em;
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+.item
+
+/* Responsive */
+@media screen and (max-width: 1023px) {
+  body {
+    --calculate: 1;
+    --w-image: 400px;
+  }
+
+  .carousel .list .item .main-content .content h2 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .carousel .list .item .image {
+    width: 400px;
+    left: 0;
+    justify-content: center;
+  }
+
+  .carousel .list .item .image figcaption {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+  }
+
+  .carousel .list .item .main-content .content {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-form, .main-nav, .profile-section {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .main-nav ul {
+    justify-content: space-around;
+  }
+}
+
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-image {
+  width: 60px;
+  border-radius: 50%;
+}
+
+

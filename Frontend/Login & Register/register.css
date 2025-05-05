@@ -1,0 +1,281 @@
+@import url('https //fonts.googleapis.com/css family=poppins');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+.navbar{
+    height: 60px;
+    width: 100vw;
+    background-color: #53966A;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+.head{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    padding-right: 50%;
+    color: #0B3835;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    height: 80px;
+    background-color: #4f8b69;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    z-index: 10;
+}
+
+/* Group container for logo and search */
+    .header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Group container for navbar and profile */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.search-form {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    max-width: 400px;
+}
+
+.search-input {
+    padding: 0.55rem 1rem;
+    font-size: 1rem;
+    border: 1px solid white;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    flex: 1;
+}
+
+.search-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: white;
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    }
+
+.search-button:hover {
+    background-color: #0096FF;
+}
+
+header .logo img {
+    width: 70px;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+header nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    padding-right: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    border-left: 1px solid var(--border-color);
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-image {
+    width: 60px;
+    border-radius: 50%;
+}
+
+  
+.others{
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+}
+.others a{
+    text-decoration: none;
+    color: #0B3835;
+    font-weight: 600;
+}
+.others a:hover{
+    color: #fff;
+}
+.others a::after{
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 3px;
+    right: 0;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+.others a:hover::after{
+    transform: scaleX(1);
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url(./wallpaperflare.com_wallpaper.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 550px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 2em;
+    color: #0B3835;
+    text-align: center;
+}
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+.inputbox icon-con{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+.forgot{
+    margin: -15px 0 15px 0;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content:flex-start;
+}
+.forgot label input{
+    margin-right: 3px;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+.register{
+    padding-top: 2px;
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+    color: #A6D9F7;
+}
+/*-----costom scrollbar-----*/
+/* ::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background: #ffefef;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#0B3835,#53966A);
+    border-radius: 10px;
+} */
+/*-----costom scrollbar-----*/
+
