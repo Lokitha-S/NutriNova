@@ -1,0 +1,184 @@
+@import url('https //fonts.googleapis.com/css family=poppins');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+.navbar{
+    height: 60px;
+    width: 100vw;
+    background-color: #53966A;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+.head{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    padding-right: 50%;
+    color: #0B3835;
+}
+.others{
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+}
+.others a{
+    text-decoration: none;
+    color: #0B3835;
+    font-weight: 600;
+}
+.others a:hover{
+    color: #fff;
+}
+.others a::after{
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 3px;
+    right: 0;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+.others a:hover::after{
+    transform: scaleX(1);
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url(./wallpaperflare.com_wallpaper.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 2em;
+    color: #0B3835;
+    text-align: center;
+}
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+.inputbox icon-con{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+.forgot{
+    margin: -15px 0 15px 0;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content:center;
+}
+.forgot label input{
+    margin-right: 3px;
+
+}
+.forgot label a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.forgot label a:hover{
+    text-decoration: underline;
+    color: #A6D9F7;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+.register{
+    padding-top: 2px;
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+    color: #A6D9F7;
+}
+/* -----costom scrollbar-----*/
+/* ::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background: #ffefef;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#0B3835,#53966A);
+    border-radius: 10px;
+} */
+/*-----costom scrollbar----- */
+
